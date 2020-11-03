@@ -1,0 +1,58 @@
+/*Custom css*/
+
+div.dataTables_paginate,div.dataTables_filter {
+    float: right;
+}
+.dataTables_length label{
+    display: inline-flex;
+}
+a.tabledit-edit-button.btn.btn-primary.waves-effect.waves-light {
+    margin-right: 5px;
+}
+.login-card {
+    margin: 0 auto;
+}
+.hidden{
+    display: none !important;
+}
+/* fallback */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v46/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+.card-header {
+    padding: 30px;
+    background-color: transparent;
+    color: #757575;
+    border-bottom: 6px solid darkgray;
+    margin-bottom: 20px;
+}
+.card-header-text {
+    font-size: 18px;
+    font-weight: 900;
+}
+.user-block-2{
+    padding: 5px 0;
+}
+.main-header-top .top-nav .notification-menu .dropdown-menu {
+    max-height: 300px;
+    overflow-y: scroll;
+}

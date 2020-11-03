@@ -1,0 +1,430 @@
+{% extends "users/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<!-- Container-fluid starts -->
+<div class="container-fluid">
+   <!-- Main content starts -->
+   <div class="tab-list">
+      <!-- Row Starts -->
+      <div class="row">
+         <div class="col-lg-12 p-0">
+            <div class="main-header">
+               <h4>Tabs</h4>
+               <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                  <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                  </li>
+                  <li class="breadcrumb-item"><a href="/appointments-list"> Appointments </a>
+                  </li>
+                  <li class="breadcrumb-item"><a href="#!">Detail</a>
+                  </li>
+               </ol>
+            </div>
+         </div>
+      </div>
+      <!-- Row end -->
+      <div class="row">
+         <div class="col-lg-12">
+            <!-- Row start -->
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="card">
+                     <!-- Radio-Button start -->
+                     <div class="card-block tab-icon">
+                        <!-- Row start -->
+                        <div class="row">
+                           <div class="col-lg-12">
+
+                              <div class="card media-contactBox">
+                                 <div class="card-block ">
+                                    <div class="contact-mobi-front">
+                                       <div class="contact-details-front-img">
+                                          <!-- Nav tabs -->
+                                          <ul class="nav nav-tabs md-tabs " role="tablist">
+                                             <li class="nav-item">
+                                                <a class="nav-link active" data-toggle="tab" href="#appintment_info" role="tab"><i class="icofont icofont-ui-calendar"></i>Student Info</a>
+                                                <div class="slide"></div>
+                                             </li>
+
+                                          </ul>
+                                       </div>
+                                       <div class="container">
+                                          <div class="md-float-material">
+                                             <div class="row">
+                                                <div class="col-sm-6">
+                                                   <div class="md-group-add-on p-relative">
+                                                      <span class="md-add-on">
+                                                          <i class="icofont icofont-user"></i>
+                                                      </span>
+                                                      <div class="md-input-wrapper">
+                                                         <input type="text" class="md-form-control md-static" name="full_name" readonly>
+                                                         <label>Full Name</label>
+
+                                                      </div>
+                                                   </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                   <div class="md-group-add-on p-relative">
+                                                      <span class="md-add-on">
+                                                          <i class="icofont icofont-envelope-open"></i>
+                                                      </span>
+                                                      <div class="md-input-wrapper">
+                                                         <input type="text" class="md-form-control md-static" name="gender" readonly>
+                                                         <label>Gender</label>
+
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                   <div class="md-group-add-on p-relative">
+                                                      <span class="md-add-on">
+                                                          <i class="icofont icofont-phone-circle"></i>
+                                                      </span>
+                                                      <div class="md-input-wrapper">
+                                                         <input type="number" name="weight" class="md-form-control md-static" readonly>
+                                                         <label>Weight (In Kg)</label>
+
+                                                      </div>
+                                                   </div>
+
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                   <div class="md-group-add-on p-relative">
+                                                      <span class="md-add-on">
+                                                          <i class="icofont icofont-ui-cell-phone"></i>
+                                                      </span>
+                                                      <div class="md-input-wrapper">
+                                                         <input type="number" name="height" class="md-form-control md-static" readonly>
+                                                         <label>Height (In Feet)</label>
+
+                                                      </div>
+                                                   </div>
+
+                                                </div>
+                                                <div class="col-sm-6">
+                                                   <div class="md-group-add-on p-relative">
+                                                      <span class="md-add-on">
+                                                          <i class="icofont icofont-brand-wordpress"></i>
+                                                      </span>
+                                                      <div class="md-input-wrapper">
+                                                         <input type="text" name="martial_status" class="md-form-control md-static" readonly>
+                                                         <label>Martial Status</label>
+
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                   <div class="md-group-add-on p-relative">
+                                                      <span class="md-add-on">
+                                                          <i class="icofont icofont-social-dribbble"></i>
+                                                      </span>
+                                                      <div class="md-input-wrapper">
+                                                         <input type="text" name="blood_type" class="md-form-control md-static" readonly>
+                                                         <label>Blood Type</label>
+
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <!-- </div> -->
+
+                                                <!-- <div class="row"> -->
+                                                <div class="col-sm-6">
+                                                   <div class="md-group-add-on p-relative">
+                                                      <span class="md-add-on">
+                                                                <i class="icofont icofont-address-book"></i>
+                                                            </span>
+                                                      <div class="md-input-wrapper">
+                                                         <textarea name="diseases" readonly class="md-form-control md-static" cols="2" rows="2"></textarea>
+                                                         <label>Diseases Allergies</label>
+
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <!-- <div class="row"> -->
+                                                <div class="col-sm-6">
+                                                   <div class="md-group-add-on p-relative">
+                                                      <span class="md-add-on">
+                                                                <i class="icofont icofont-address-book"></i>
+                                                            </span>
+                                                      <div class="md-input-wrapper">
+                                                         <textarea name="notes" readonly class="md-form-control md-static" cols="2" rows="2"></textarea>
+                                                         <label>Notes</label>
+
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                                <!-- </div> -->
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+                                       <div style="padding-bottom:15px">
+                                          <!-- Nav tabs -->
+                                          <ul class="nav nav-tabs md-tabs " role="tablist">
+                                             <li class="nav-item">
+                                                <a class="nav-link active" data-toggle="tab" href="#appintment_info" role="tab"><i class="icofont icofont-ui-calendar"></i>Appointment Info</a>
+                                                <div class="slide"></div>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                       <div class="container">
+                                             <div class="md-float-material">
+                                                <div class="row">
+                                                   <div class="col-sm-6">
+                                                      <div class="md-group-add-on p-relative">
+                                                         <span class="md-add-on">
+                                                             <i class="icofont icofont-user"></i>
+                                                         </span>
+                                                         <div class="md-input-wrapper">
+                                                            <input type="text" readonly name="created_date" class="md-form-control md-static">
+                                                            <label>Created Date</label>
+
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-sm-6">
+                                                      <div class="md-group-add-on p-relative">
+                                                         <span class="md-add-on">
+                                                             <i class="icofont icofont-envelope-open"></i>
+                                                         </span>
+                                                         <div class="md-input-wrapper">
+                                                            <input type="text" readonly name="datetime" class="md-form-control md-static">
+                                                            <label>Appointment Date</label>
+
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                   <div class="md-group-add-on p-relative">
+                                                      <span class="md-add-on">
+                                                                <i class="icofont icofont-address-book"></i>
+                                                            </span>
+                                                      <div class="md-input-wrapper">
+                                                         <textarea class="md-form-control md-static" readonly name="disease" cols="2" rows="2"></textarea>
+                                                         <label>Disease</label>
+
+                                                      </div>
+                                                   </div>
+
+                                                </div>
+                                                   <div class="col-sm-6">
+                                                   <div class="md-group-add-on p-relative">
+                                                      <span class="md-add-on">
+                                                                <i class="icofont icofont-address-book"></i>
+                                                            </span>
+                                                      <div class="md-input-wrapper">
+                                                         <textarea class="md-form-control md-static" readonly name="notes" cols="2" rows="2"></textarea>
+                                                         <label>Notes</label>
+
+                                                      </div>
+                                                   </div>
+
+                                                </div>
+                                                </div>
+                                             </div>
+                                       </div>
+                                    <div style="padding-bottom:15px">
+                                       <ul class="nav nav-tabs md-tabs " role="tablist">
+                                          <li class="nav-item">
+                                             <a class="nav-link active" data-toggle="tab" href="#appintment_info" role="tab"><i class="icofont icofont-ui-calendar"></i>Prescription Info</a>
+                                             <div class="slide"></div>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    <div class="container">
+                                       <div class="md-float-material">
+                                          <div class="pre_row">
+                                          <div class="app_row row">
+                                             <div class="col-sm-3">
+                                                <div class="md-group-add-on p-relative">
+                                                      <span class="md-add-on">
+                                                          <i class="icofont icofont-user"></i>
+                                                      </span>
+                                                   <div class="md-input-wrapper">
+                                                      <input type="text" readonly name="medicine_name" class="md-form-control md-static">
+                                                      <label>Medicine Name</label>
+
+                                                   </div>
+                                                </div>
+                                             </div>
+
+                                             <div class="col-sm-3">
+                                                <div class="md-group-add-on p-relative">
+                                                      <span class="md-add-on">
+                                                          <i class="icofont icofont-envelope-open"></i>
+                                                      </span>
+                                                   <div class="md-input-wrapper">
+                                                      <input type="text" readonly name="medicine_type" class="md-form-control md-static">
+                                                      <label>Medicine Type</label>
+
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="col-sm-6">
+                                                <div class="md-group-add-on p-relative">
+                                                      <span class="md-add-on">
+                                                                <i class="icofont icofont-address-book"></i>
+                                                            </span>
+                                                   <div class="md-input-wrapper">
+                                                      <textarea class="md-form-control md-static" readonly name="how_to_use" cols="2" rows="1"></textarea>
+                                                      <label>How To Use   </label>
+
+                                                   </div>
+                                                </div>
+                                             </div>
+
+                                          </div>
+
+                                          </div>
+                                          <div class="formss">
+                                             {% if request|getUserGroup != 'Student' or request|getUserGroup == 'Pharmacist'  %}
+                                                {% crispy Appointmentreferform %}
+
+                                                <div class="row">
+                                                   <div class="col-sm-6 m-b-20">
+                                                      <button  class="btn btn-primary waves-effect waves-light" id="refer_to">
+                                                         Refer
+                                                      </button>
+                                                   </div>
+                                                </div>
+                                             {% endif %}
+                                             {% if request|getUserGroup == 'Doctor' or request|getUserGroup == 'Pharmacist' %}
+                                                <div class="row">
+                                                   <div class="col-sm-6 ">
+                                                      <a type="button" href="/appointments/{{appointment_id}}/prescriptions/add/" class="btn btn-primary waves-effect waves-light">
+                                                         <i class="icofont icofont-plus"> </i>ADD Prescription
+                                                      </a>
+                                                   </div>
+                                                </div>
+                                                {% endif %}
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                    <!-- end of contact-mobi-front -->
+                              </div>
+                           </div>
+
+                        </div>
+                     </div>
+                        <!-- Row end -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Row end -->
+         </div>
+      </div>
+      <!-- loader ends -->
+   </div>
+   <!-- Row end -->
+
+</div>
+<!-- Container-fluid ends -->
+
+{% endblock %}
+
+{% block footer %}
+<script>
+    jQuery(document).ready(function($) {
+       getPrescriptioninfo()
+       function getPrescriptioninfo(){
+          $.ajax({
+             type: 'GET',
+             url: '/api/prescriptions',
+             data:{'appointment_id':'{{appointment_id}}'},
+             headers: {'Authorization': "Token {{request|getToken}}", 'Content-Type': 'application/json'},
+             success: function (data) {
+                var html = $(".pre_row").html();
+                var datas = data.results;
+                $(datas).each(function(index,values){
+                   $(".pre_row").append(html);
+                   $('.app_row:last').addClass('rowNo'+index);
+                   for(var attr in values){
+                      if (values.hasOwnProperty(attr)) {
+                         if(values[attr] == '' || values[attr]==null)
+                            values[attr] = '----';
+                         $('.rowNo'+index).find('input[name="'+attr+'"]').val(values[attr]);
+                         $('.rowNo'+index).find('textarea[name="'+attr+'"]').html(values[attr]);
+                      }
+                   }
+                });
+             }
+          });
+       }
+        getAppointmentInfo()
+        function getAppointmentInfo(){
+
+            $.ajax({
+               type: 'GET',
+               url: '/api/appointments/{{appointment_id}}',
+               headers: {'Authorization': "Token {{request|getToken}}", 'Content-Type': 'application/json'},
+               success: function (data) {
+                  if(data['doctor_id'] != data['refer_to']){
+                     //$("#id_refer_to").val(data['refer_to']).trigger("change").attr('disabled', 'disabled');
+                     //$(".buttons").addClass('hidden');
+                  }
+                  setFormData(data);
+                  getStudentInfo(data['student_id']);
+               }
+            });
+        }
+        function getStudentInfo(student_id){
+
+            $.ajax({
+               type: 'GET',
+               url: '/api/users/'+student_id,
+               data:{'type':'student'},
+               headers: {'Authorization': "Token {{request|getToken}}", 'Content-Type': 'application/json'},
+               success: function (data) {
+                  $('input[name="full_name"]').val(data['first_name']+' '+data['last_name']);
+                  setFormData(data);
+               }
+            });
+        }
+
+        function setFormData(data){
+            for(var attr in data){
+               if (data.hasOwnProperty(attr)) {
+                  if(data[attr] == '' || data[attr]==null)
+                     data[attr] = '----';
+
+                  $('input[name="'+attr+'"]').val(data[attr]);
+                  $('textarea[name="'+attr+'"]').html(data[attr]);
+                }
+            }
+        }
+       function saveFormData(url, btnEl, method_type){
+             var array = jQuery('form').serializeArray();
+             var from_data = {};
+             jQuery.each(array, function () {
+                from_data[this.name] = this.value || '';
+             });
+             $.ajax({
+                type: method_type,
+                url: url,
+                headers: {'Authorization': "Token {{request|getToken}}", 'Content-Type': 'application/json'},
+                data: JSON.stringify(from_data),
+                success: function (data) {
+                   $.toaster({ priority : 'success', title : 'Status', message : 'User refereed Successfully !'});
+                }
+             });
+       }
+       jQuery(document).on('click','#refer_to',function(e){
+          e.preventDefault();
+          var url = "/api/appointments/{{appointment_id}}/";
+          var method_type = "PATCH";
+          saveFormData(url, $(this), method_type);
+       });
+    });
+</script>
+{% endblock %}
